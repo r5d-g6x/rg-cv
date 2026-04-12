@@ -1,15 +1,19 @@
+import { useState } from 'react';
 import ModernCV from './components/ModernCV';
-import { profileData } from './data/profile';
+import { profileDataFr, profileDataEn } from './data/richard-profile';
 import { generateMarkdown } from './utils/markdownGenerator';
 
 function App() {
+  const [lang, setLang] = useState<'fr' | 'en'>('fr');
+  const profile = lang === 'fr' ? profileDataFr : profileDataEn;
+
   const handleGenerateMarkdown = () => {
-    const markdown = generateMarkdown(profileData);
+    const markdown = generateMarkdown(profile);
     const blob = new Blob([markdown], { type: 'text/markdown' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `${profileData.name.replace(/\s+/g, '_')}_CV.txt`;
+    a.download = `${profile.name.replace(/\s+/g, '_')}_CV.txt`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -19,6 +23,16 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50 relative">
       <div className="no-print hidden md:flex flex-col gap-2 absolute top-4 right-4">
+        {/* Language toggle */}
+        <button
+          onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
+          title={lang === 'fr' ? 'Switch to English' : 'Passer en français'}
+          className="flex items-center justify-center gap-1 px-3 py-2 text-sm font-semibold text-royal-blue hover:text-royal-blue-dark bg-white/70 hover:bg-white rounded-md shadow-sm border"
+        >
+          {lang === 'fr' ? '🇬🇧 EN' : '🇫🇷 FR'}
+        </button>
+
+        {/* Export Markdown */}
         <button
           onClick={handleGenerateMarkdown}
           title="Générer Markdown"
@@ -30,6 +44,8 @@ function App() {
           </svg>
           <span className="sr-only md:not-sr-only">Text (MD)</span>
         </button>
+
+        {/* Print */}
         <button
           onClick={() => window.print()}
           title="Imprimer"
@@ -42,7 +58,8 @@ function App() {
           <span className="sr-only md:not-sr-only">Imprimer</span>
         </button>
       </div>
-      <ModernCV profile={profileData} />
+
+      <ModernCV profile={profile} lang={lang} />
     </div>
   );
 }

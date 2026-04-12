@@ -43,8 +43,10 @@ export interface ProfileData {
   summary: string;
   experiences: Experience[];
   education: Education[];
+  photo?: string;
   skills: {
     technical: TechnicalSkill[];
+    aiTools?: string[];
     tools: string[];
     soft: string[];
   };
