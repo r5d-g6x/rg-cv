@@ -1,5 +1,6 @@
 import decathlonLogo from '../assets/decathlon.png';
 import sgcibLogo from '../assets/sgcib.png';
+import profilePhoto from '../assets/rg-profile.jpg';
 import { ProfileData } from './profile';
 
 export const profileDataFr: ProfileData = {
@@ -9,6 +10,7 @@ export const profileDataFr: ProfileData = {
   email: "richard.guilloux@gmail.com",
   location: "Paris et périphérie",
   linkedin: "https://www.linkedin.com/in/richardguilloux-4859a012",
+  photo: profilePhoto,
 
   summary:
     "Ingénieur Fullstack senior avec près de 20 ans d'expérience, spécialisé dans l'écosystème Java/Kotlin (Spring Boot) et les architectures cloud-native sur GCP. " +
@@ -92,6 +94,7 @@ export const profileDataEn: ProfileData = {
   email: "richard.guilloux@gmail.com",
   location: "Paris area, France",
   linkedin: "https://www.linkedin.com/in/richardguilloux-4859a012",
+  photo: profilePhoto,
 
   summary:
     "Senior Fullstack Engineer with nearly 20 years of experience, specializing in the Java/Kotlin (Spring Boot) ecosystem and cloud-native architectures on GCP. " +
