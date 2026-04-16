@@ -11,7 +11,7 @@ export const profileDataFr: ProfileData = {
   subtitle: "Architecte du back, explorateur de l'IA.",
   email: "richard.guilloux@gmail.com",
   location: "Paris et périphérie",
-  linkedin: "https://www.linkedin.com/in/richardguilloux-4859a012",
+  linkedin: "https://www.linkedin.com/in/richard-guilloux-4859a012/",
   photo: profilePhoto,
 
   summary:
@@ -97,7 +97,7 @@ export const profileDataEn: ProfileData = {
   subtitle: "Backend architect, AI explorer.",
   email: "richard.guilloux@gmail.com",
   location: "Paris area, France",
-  linkedin: "https://www.linkedin.com/in/richardguilloux-4859a012",
+  linkedin: "https://www.linkedin.com/in/richard-guilloux-4859a012/",
   photo: profilePhoto,
 
   summary:
