@@ -17,7 +17,7 @@ export const profileDataFr: ProfileData = {
   summary:
     "Ingénieur logiciel senior, spécialisé en backend Java/Kotlin avec Spring Boot, et disposant d'une expérience concrète sur des environnements cloud-native GCP (Cloud Run, GKE).\n\n" +
     "Profil fullstack, avec une pratique opérationnelle du frontend (Angular, Vue/Nuxt, React) ainsi que des pipelines CI/CD.\n\n" +
-    "Première expérience en architectures IA acquise chez Decathlon : conception et mise en production d'un assistant conversationnel orchestré via Google ADK (Agents + RAG vers Gemini).\n\n" +
+    "Première expérience en architectures IA acquise chez Decathlon : conception et mise en production d'un agent conversationnel via Google ADK — architecture agentique réelle (pas un simple chatbot) : l'agent interroge et modifie une base de données en temps réel via function calling, avec RAG sur Vertex AI / Gemini.\n\n" +
     "Utilisateur quotidien d'outils d'IA pour le développement tels que GitHub Copilot et Claude Code, dans une logique d'optimisation de la productivité.\n\n" +
     "À la recherche d'un poste fullstack où l'intégration pragmatique de l'IA constitue un vrai atout.",
 
@@ -27,11 +27,11 @@ export const profileDataFr: ProfileData = {
       company: "Decathlon France",
       period: "Juin 2023 – Présent",
       description:
-        "Mission IA (en cours) : Développement du Manager's Companion, plateforme qui rationalise les outils internes Decathlon en les unifiant dans une interface unique, complétée par un assistant conversationnel IA pour accompagner les collaborateurs au quotidien. Je participe principalement sur le backend : Kotlin / Spring Boot 4 + Spring Modulith (architecture BFF) sur GKE ; agents IA via Google ADK + RAG sur Vertex AI / Gemini. Sécurisation OAuth2/JWT (Resource Server), observabilité OpenTelemetry + Prometheus, tests Kotest + Testcontainers. Frontend Nx monorepo : React 19, TanStack Router/Query, génération client API via Orval (OpenAPI), Vitamin Design System.\n\nMission Diagnostics (2 ans) : Conception et développement full-cycle d'une application web interne de gestion de diagnostics (Nuxt 3 · Spring Boot 3 · Docker · Cloud Run GCP).",
+        "Mission IA (en cours) : Développement du Manager's Companion, plateforme qui unifie les outils internes Decathlon dans une interface unique, complétée par un agent conversationnel orchestré via Google ADK — architecture agentique réelle (pas un simple chatbot) : l'agent interroge et modifie une base de données en temps réel via function calling, avec RAG sur Vertex AI / Gemini. Je participe principalement sur le backend : Kotlin / Spring Boot 4 + Spring Modulith (architecture BFF) sur GKE. Sécurisation OAuth2/JWT (Resource Server), observabilité OpenTelemetry + Prometheus, tests Kotest + Testcontainers. Frontend Nx monorepo : React 19, TanStack Router/Query, génération client API via Orval (OpenAPI), Vitamin Design System.\n\nMission Diagnostics (2 ans) : Conception et développement full-cycle d'une application web interne de gestion de diagnostics (Nuxt 3 · Spring Boot 3 · Docker · Cloud Run GCP).",
       techStacks: [
         { label: "Back", items: ["Kotlin", "Java 25", "Spring Boot 4", "Spring Modulith", "PostgreSQL", "Flyway", "OAuth2/JWT", "OpenTelemetry", "Prometheus", "Kotest", "Testcontainers"] },
         { label: "Front", items: ["React 19", "Nx", "TanStack Router", "TanStack Query", "Orval", "Nuxt 3", "Vitamin Design System", "Tailwind CSS"] },
-        { label: "IA", items: ["Google ADK", "Vertex AI", "Gemini", "RAG", "Prompt Engineering"] },
+        { label: "IA", items: ["Google ADK", "Vertex AI", "Gemini", "RAG", "Function Calling", "Prompt Engineering"] },
         { label: "Infra", items: ["GKE", "Cloud Run", "GCP", "Docker", "GitHub Actions"] },
       ],
       logo: decathlonLogo,
@@ -93,7 +93,9 @@ export const profileDataFr: ProfileData = {
   ],
 
   projects: [],
-  interests: [],
+  interests: [
+    "Veille IA & automatisation : agents IA, connecteurs MCP, n8n, workflows d'automatisation",
+  ],
 };
 
 export const profileDataEn: ProfileData = {
@@ -108,7 +110,7 @@ export const profileDataEn: ProfileData = {
   summary:
     "Senior Software Engineer, specialized in Java/Kotlin backend with Spring Boot, with concrete experience in cloud-native GCP environments (Cloud Run, GKE).\n\n" +
     "Fullstack profile, with operational practice in frontend development (Angular, Vue/Nuxt, React) and CI/CD pipelines.\n\n" +
-    "First experience in AI architectures gained at Decathlon: design and production deployment of a conversational assistant orchestrated via Google ADK (ADK agents + RAG to Gemini).\n\n" +
+    "First experience in AI architectures gained at Decathlon: design and production deployment of a conversational agent via Google ADK — genuine agentic architecture (not just a chatbot): the agent queries and modifies a database in real time via function calling, with RAG on Vertex AI / Gemini.\n\n" +
     "Daily user of AI development tools such as GitHub Copilot and Claude Code, with a focus on productivity optimization.\n\n" +
     "Looking for a fullstack role where the pragmatic integration of AI is a genuine asset.",
 
@@ -118,11 +120,11 @@ export const profileDataEn: ProfileData = {
       company: "Decathlon France",
       period: "June 2023 – Present",
       description:
-        "AI Mission (ongoing): Development of Manager's Companion, a platform that rationalizes Decathlon's internal tools by unifying them in a single interface, complemented by a conversational AI assistant to support employees in their daily work. Primarily involved on the backend: Kotlin / Spring Boot 4 + Spring Modulith (BFF architecture) on GKE; AI agents via Google ADK + RAG on Vertex AI / Gemini. OAuth2/JWT security (Resource Server), OpenTelemetry + Prometheus observability, Kotest + Testcontainers testing. Nx monorepo frontend: React 19, TanStack Router/Query, API client generation via Orval (OpenAPI), Vitamin Design System.\n\nDiagnostics Mission (2 years): Full-cycle design and development of an internal web application for diagnostics management (Nuxt 3 · Spring Boot 3 · Docker · Cloud Run GCP).",
+        "AI Mission (ongoing): Development of Manager's Companion, a platform that unifies Decathlon's internal tools in a single interface, complemented by a conversational agent orchestrated via Google ADK — genuine agentic architecture (not just a chatbot): the agent queries and modifies a database in real time via function calling, with RAG on Vertex AI / Gemini. Primarily involved on the backend: Kotlin / Spring Boot 4 + Spring Modulith (BFF architecture) on GKE. OAuth2/JWT security (Resource Server), OpenTelemetry + Prometheus observability, Kotest + Testcontainers testing. Nx monorepo frontend: React 19, TanStack Router/Query, API client generation via Orval (OpenAPI), Vitamin Design System.\n\nDiagnostics Mission (2 years): Full-cycle design and development of an internal web application for diagnostics management (Nuxt 3 · Spring Boot 3 · Docker · Cloud Run GCP).",
       techStacks: [
         { label: "Back", items: ["Kotlin", "Java 25", "Spring Boot 4", "Spring Modulith", "PostgreSQL", "Flyway", "OAuth2/JWT", "OpenTelemetry", "Prometheus", "Kotest", "Testcontainers"] },
         { label: "Front", items: ["React 19", "Nx", "TanStack Router", "TanStack Query", "Orval", "Nuxt 3", "Vitamin Design System", "Tailwind CSS"] },
-        { label: "AI", items: ["Google ADK", "Vertex AI", "Gemini", "RAG", "Prompt Engineering"] },
+        { label: "AI", items: ["Google ADK", "Vertex AI", "Gemini", "RAG", "Function Calling", "Prompt Engineering"] },
         { label: "Infra", items: ["GKE", "Cloud Run", "GCP", "Docker", "GitHub Actions"] },
       ],
       logo: decathlonLogo,
@@ -184,5 +186,7 @@ export const profileDataEn: ProfileData = {
   ],
 
   projects: [],
-  interests: [],
+  interests: [
+    "AI & automation: AI agents, MCP connectors, n8n, automation workflows",
+  ],
 };
