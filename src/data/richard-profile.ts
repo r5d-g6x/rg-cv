@@ -7,7 +7,7 @@ import { ProfileData } from './profile';
 
 export const profileDataFr: ProfileData = {
   name: "Richard Guilloux",
-  title: "Ingénieur Fullstack Senior | Java/Kotlin Spring Boot · IA",
+  title: "Ingénieur Fullstack Senior | Java/Kotlin Spring Boot · AI Augmented",
   subtitle: "Architecte du back, explorateur de l'IA.",
   email: "richard.guilloux@gmail.com",
   location: "Paris et périphérie",
@@ -98,7 +98,7 @@ export const profileDataFr: ProfileData = {
 
 export const profileDataEn: ProfileData = {
   name: "Richard Guilloux",
-  title: "Senior Fullstack Engineer | Java/Kotlin Spring Boot · AI",
+  title: "Senior Fullstack Engineer | Java/Kotlin Spring Boot · AI Augmented",
   subtitle: "Backend architect, AI explorer.",
   email: "richard.guilloux@gmail.com",
   location: "Paris area, France",
