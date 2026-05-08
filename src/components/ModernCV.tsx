@@ -242,11 +242,12 @@ const ModernCV: FC<ModernCVProps> = ({ profile, lang = 'en' }) => {
               {profile.experiences.map((exp, index) => (
                 <div
                   key={index}
-                  className={`border-l-4 border-royal-blue pl-6 relative avoid-break ${
+                  className={`pl-6 relative avoid-break ${
                     index === 3 ? 'print-break-before after-break-offset' : ''
                   }`}
                 >
-                  <div className="absolute -left-2 top-0 w-4 h-4 bg-royal-blue rounded-full"></div>
+                  <div className="absolute left-0 top-0 w-4 h-4 -translate-x-1/2 bg-royal-blue rounded-full z-10"></div>
+                  <div className="absolute left-0 top-2 bottom-0 w-1 -translate-x-1/2 bg-royal-blue"></div>
                   <div className="mb-4">
                     <h3 className="text-xl font-semibold text-gray-900">{exp.title}</h3>
                     <div className="flex items-center gap-3">
@@ -276,9 +277,18 @@ const ModernCV: FC<ModernCVProps> = ({ profile, lang = 'en' }) => {
                     </div>
                     <p className="text-sm text-gray-600 mb-3">{exp.period}</p>
                     <div className="text-gray-700 mb-4 leading-relaxed space-y-2">
-                      {exp.description.split('\n\n').map((para, i) => (
-                        <p key={i}>{para}</p>
-                      ))}
+                      {exp.description.split('\n\n').map((para, i) => {
+                        const missionMatch = para.match(/^(Mission [^:]+:)([\s\S]*)$/);
+                        if (missionMatch) {
+                          return (
+                            <p key={i}>
+                              <strong>{missionMatch[1]}</strong>
+                              {missionMatch[2]}
+                            </p>
+                          );
+                        }
+                        return <p key={i}>{para}</p>;
+                      })}
                     </div>
                     {exp.techStacks ? (
                       <div className="flex flex-col gap-2">
@@ -330,9 +340,10 @@ const ModernCV: FC<ModernCVProps> = ({ profile, lang = 'en' }) => {
               {profile.education.map((edu, index) => (
                 <div
                   key={index}
-                  className="border-l-4 border-royal-blue pl-6 relative avoid-break"
+                  className="pl-6 relative avoid-break"
                 >
-                  <div className="absolute -left-2 top-0 w-4 h-4 bg-royal-blue rounded-full"></div>
+                  <div className="absolute left-0 top-0 w-4 h-4 -translate-x-1/2 bg-royal-blue rounded-full z-10"></div>
+                  <div className="absolute left-0 top-2 bottom-0 w-1 -translate-x-1/2 bg-royal-blue"></div>
                   <h3 className="text-xl font-semibold text-gray-900">{edu.degree}</h3>
                   <div className="flex items-center gap-3 mt-1">
                     {edu.logo && (

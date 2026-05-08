@@ -27,11 +27,11 @@ export const profileDataFr: ProfileData = {
       company: "Decathlon France",
       period: "Juin 2023 – Présent",
       description:
-        "Mission IA (en cours) : Développement du Manager's Companion, assistant IA conversationnel pour les collaborateurs Decathlon. Backend Kotlin / Spring Boot 4 + Spring Modulith (architecture BFF) sur GKE ; agents IA via Google ADK + RAG sur Vertex AI / Gemini. Sécurisation OAuth2/JWT (Resource Server), observabilité OpenTelemetry + Prometheus, tests Kotest + Testcontainers. Frontend Nx monorepo : React 19, TanStack Router/Query, génération client API via Orval (OpenAPI), Vitamin Design System.\n\nMission Diagnostics (2 ans) : Conception et développement full-cycle d'une application web interne de gestion de diagnostics (Nuxt 3 · Spring Boot 3 · Docker · Cloud Run GCP).",
+        "Mission IA (en cours) : Développement du Manager's Companion, plateforme qui rationalise les outils internes Decathlon en les unifiant dans une interface unique, complétée par un assistant conversationnel IA pour accompagner les collaborateurs au quotidien. Je participe principalement sur le backend : Kotlin / Spring Boot 4 + Spring Modulith (architecture BFF) sur GKE ; agents IA via Google ADK + RAG sur Vertex AI / Gemini. Sécurisation OAuth2/JWT (Resource Server), observabilité OpenTelemetry + Prometheus, tests Kotest + Testcontainers. Frontend Nx monorepo : React 19, TanStack Router/Query, génération client API via Orval (OpenAPI), Vitamin Design System.\n\nMission Diagnostics (2 ans) : Conception et développement full-cycle d'une application web interne de gestion de diagnostics (Nuxt 3 · Spring Boot 3 · Docker · Cloud Run GCP).",
       techStacks: [
         { label: "Back", items: ["Kotlin", "Java 25", "Spring Boot 4", "Spring Modulith", "PostgreSQL", "Flyway", "OAuth2/JWT", "OpenTelemetry", "Prometheus", "Kotest", "Testcontainers"] },
-        { label: "IA", items: ["Google ADK", "Vertex AI", "Gemini", "RAG", "Prompt Engineering"] },
         { label: "Front", items: ["React 19", "Nx", "TanStack Router", "TanStack Query", "Orval", "Nuxt 3", "Vitamin Design System", "Tailwind CSS"] },
+        { label: "IA", items: ["Google ADK", "Vertex AI", "Gemini", "RAG", "Prompt Engineering"] },
         { label: "Infra", items: ["GKE", "Cloud Run", "GCP", "Docker", "GitHub Actions"] },
       ],
       logo: decathlonLogo,
@@ -77,13 +77,13 @@ export const profileDataFr: ProfileData = {
 
   skills: {
     technical: [
-      { description: "LLMs · Agents IA · RAG · Prompt Engineering · Google ADK", level: "expérience projet" },
-      { description: "Java · Kotlin · Spring Boot · Spring Modulith · Hibernate", level: "senior" },
-      { description: "TypeScript · React · Vue.js / Nuxt · Angular", level: "opérationnel" },
+      { description: "LLMs · Agents IA · RAG · Prompt Engineering · Google ADK · Vertex AI", level: "expérience projet" },
+      { description: "Java 25 · Kotlin · Spring Boot 4 · Spring Modulith · Flyway · OAuth2/JWT", level: "senior" },
+      { description: "TypeScript · React 19 · TanStack Router/Query · Vue.js / Nuxt · Angular · Nx", level: "opérationnel" },
       { description: "SQL · Oracle · PostgreSQL · Elastic Search", level: "confirmé" },
     ],
     aiTools: ["GitHub Copilot", "Claude Code", "ChatGPT", "Gemini"],
-    tools: ["Docker", "Kubernetes", "GCP (Cloud Run · GKE)", "GitHub Actions", "Git", "Jenkins", "Maven"],
+    tools: ["Docker", "Kubernetes", "GCP (Cloud Run · GKE)", "GitHub Actions", "OpenTelemetry", "Prometheus", "Git", "Jenkins", "Maven"],
     soft: ["Leadership technique", "Autonomie", "Communication", "Esprit analytique", "Adaptabilité"],
   },
 
@@ -118,11 +118,11 @@ export const profileDataEn: ProfileData = {
       company: "Decathlon France",
       period: "June 2023 – Present",
       description:
-        "AI Mission (ongoing): Development of Manager's Companion, a conversational AI assistant for Decathlon employees. Kotlin / Spring Boot 4 + Spring Modulith backend (BFF architecture) on GKE; AI agents via Google ADK + RAG on Vertex AI / Gemini. OAuth2/JWT security (Resource Server), OpenTelemetry + Prometheus observability, Kotest + Testcontainers testing. Nx monorepo frontend: React 19, TanStack Router/Query, API client generation via Orval (OpenAPI), Vitamin Design System.\n\nDiagnostics Mission (2 years): Full-cycle design and development of an internal web application for diagnostics management (Nuxt 3 · Spring Boot 3 · Docker · Cloud Run GCP).",
+        "AI Mission (ongoing): Development of Manager's Companion, a platform that rationalizes Decathlon's internal tools by unifying them in a single interface, complemented by a conversational AI assistant to support employees in their daily work. Primarily involved on the backend: Kotlin / Spring Boot 4 + Spring Modulith (BFF architecture) on GKE; AI agents via Google ADK + RAG on Vertex AI / Gemini. OAuth2/JWT security (Resource Server), OpenTelemetry + Prometheus observability, Kotest + Testcontainers testing. Nx monorepo frontend: React 19, TanStack Router/Query, API client generation via Orval (OpenAPI), Vitamin Design System.\n\nDiagnostics Mission (2 years): Full-cycle design and development of an internal web application for diagnostics management (Nuxt 3 · Spring Boot 3 · Docker · Cloud Run GCP).",
       techStacks: [
         { label: "Back", items: ["Kotlin", "Java 25", "Spring Boot 4", "Spring Modulith", "PostgreSQL", "Flyway", "OAuth2/JWT", "OpenTelemetry", "Prometheus", "Kotest", "Testcontainers"] },
-        { label: "AI", items: ["Google ADK", "Vertex AI", "Gemini", "RAG", "Prompt Engineering"] },
         { label: "Front", items: ["React 19", "Nx", "TanStack Router", "TanStack Query", "Orval", "Nuxt 3", "Vitamin Design System", "Tailwind CSS"] },
+        { label: "AI", items: ["Google ADK", "Vertex AI", "Gemini", "RAG", "Prompt Engineering"] },
         { label: "Infra", items: ["GKE", "Cloud Run", "GCP", "Docker", "GitHub Actions"] },
       ],
       logo: decathlonLogo,
@@ -168,13 +168,13 @@ export const profileDataEn: ProfileData = {
 
   skills: {
     technical: [
-      { description: "LLMs · AI Agents · RAG · Prompt Engineering · Google ADK", level: "project experience" },
-      { description: "Java · Kotlin · Spring Boot · Spring Modulith · Hibernate", level: "senior" },
-      { description: "TypeScript · React · Vue.js / Nuxt · Angular", level: "operational" },
+      { description: "LLMs · AI Agents · RAG · Prompt Engineering · Google ADK · Vertex AI", level: "project experience" },
+      { description: "Java 25 · Kotlin · Spring Boot 4 · Spring Modulith · Flyway · OAuth2/JWT", level: "senior" },
+      { description: "TypeScript · React 19 · TanStack Router/Query · Vue.js / Nuxt · Angular · Nx", level: "operational" },
       { description: "SQL · Oracle · PostgreSQL · Elastic Search", level: "proficient" },
     ],
     aiTools: ["GitHub Copilot", "Claude Code", "ChatGPT", "Gemini"],
-    tools: ["Docker", "Kubernetes", "GCP (Cloud Run · GKE)", "GitHub Actions", "Git", "Jenkins", "Maven"],
+    tools: ["Docker", "Kubernetes", "GCP (Cloud Run · GKE)", "GitHub Actions", "OpenTelemetry", "Prometheus", "Git", "Jenkins", "Maven"],
     soft: ["Technical Leadership", "Autonomy", "Communication", "Analytical Mindset", "Adaptability"],
   },
 
