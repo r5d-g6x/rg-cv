@@ -4,6 +4,8 @@ export interface Experience {
   period: string;
   description: string;
   technologies?: string[];
+  techStacks?: { label: string; items: string[] }[];
+  logos?: string[];
   url?: string;
   urls?: string[];
   logo?: string;

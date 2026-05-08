@@ -250,17 +250,15 @@ const ModernCV: FC<ModernCVProps> = ({ profile, lang = 'en' }) => {
                   <div className="mb-4">
                     <h3 className="text-xl font-semibold text-gray-900">{exp.title}</h3>
                     <div className="flex items-center gap-3">
-                      {exp.logo && (
+                      {(exp.logos ?? (exp.logo ? [exp.logo] : [])).map((src, li) => (
                         <img
-                          src={exp.logo}
+                          key={li}
+                          src={src}
                           alt={`${exp.company} logo`}
                           className="w-6 h-6 object-contain rounded bg-white"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.style.display = 'none';
-                          }}
+                          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                         />
-                      )}
+                      ))}
                       <h4 className="text-lg font-medium text-royal-blue">
                         {exp.url || (exp.urls && exp.urls.length > 0) ? (
                           <a
@@ -282,7 +280,30 @@ const ModernCV: FC<ModernCVProps> = ({ profile, lang = 'en' }) => {
                         <p key={i}>{para}</p>
                       ))}
                     </div>
-                    {exp.technologies && (
+                    {exp.techStacks ? (
+                      <div className="flex flex-col gap-2">
+                        {exp.techStacks.map((stack, si) => {
+                          const colors = [
+                            { label: "bg-blue-600 text-white", tag: "bg-blue-50 text-blue-800 border-blue-200" },
+                            { label: "bg-violet-600 text-white", tag: "bg-violet-50 text-violet-800 border-violet-200" },
+                            { label: "bg-emerald-600 text-white", tag: "bg-emerald-50 text-emerald-800 border-emerald-200" },
+                            { label: "bg-orange-500 text-white", tag: "bg-orange-50 text-orange-800 border-orange-200" },
+                            { label: "bg-rose-500 text-white", tag: "bg-rose-50 text-rose-800 border-rose-200" },
+                          ];
+                          const c = colors[si % colors.length];
+                          return (
+                            <div key={si} className="flex flex-wrap items-center gap-2">
+                              <span className={`text-xs font-bold uppercase tracking-wide px-2 py-0.5 rounded ${c.label} shrink-0`}>{stack.label}</span>
+                              {stack.items.map((tech, ti) => (
+                                <span key={ti} className={`px-3 py-1 text-sm rounded-full border ${c.tag}`}>
+                                  {tech}
+                                </span>
+                              ))}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    ) : exp.technologies ? (
                       <div className="flex flex-wrap gap-2">
                         {exp.technologies.map((tech, techIndex) => (
                           <span
@@ -293,7 +314,7 @@ const ModernCV: FC<ModernCVProps> = ({ profile, lang = 'en' }) => {
                           </span>
                         ))}
                       </div>
-                    )}
+                    ) : null}
                   </div>
                 </div>
               ))}
