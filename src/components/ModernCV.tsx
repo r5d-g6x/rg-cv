@@ -13,6 +13,7 @@ const LABELS = {
     softSkills: 'Soft Skills',
     languages: 'Langues',
     interests: "Centres d'intérêt",
+    projects: 'Projets personnels',
   },
   en: {
     profile: 'Professional Profile',
@@ -25,6 +26,7 @@ const LABELS = {
     softSkills: 'Soft Skills',
     languages: 'Languages',
     interests: 'Interests',
+    projects: 'Personal Projects',
   },
 } as const;
 
@@ -367,6 +369,38 @@ const ModernCV: FC<ModernCVProps> = ({ profile, lang = 'en' }) => {
               ))}
             </div>
           </section>
+
+          {/* Personal Projects */}
+          {profile.projects.length > 0 && (
+            <section className="mb-12 avoid-break">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-royal-blue pb-2">
+                {L.projects}
+              </h2>
+              <div className="space-y-4">
+                {profile.projects.map((project, index) => (
+                  <div key={index} className="pl-6 relative avoid-break">
+                    <div className="absolute left-0 top-0 w-4 h-4 -translate-x-1/2 bg-royal-blue rounded-full z-10"></div>
+                    <div className="absolute left-0 top-2 bottom-0 w-1 -translate-x-1/2 bg-royal-blue"></div>
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {project.link ? (
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:underline text-royal-blue">
+                          {project.name}
+                        </a>
+                      ) : project.name}
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed my-2">{project.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, ti) => (
+                        <span key={ti} className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full border">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       </div>
     </div>
