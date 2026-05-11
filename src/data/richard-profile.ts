@@ -19,7 +19,7 @@ export const profileDataFr: ProfileData = {
     "Profil fullstack, avec une pratique opérationnelle du frontend (Angular, Vue/Nuxt, React) et des pipelines CI/CD.\n\n" +
     "Expérience concrète en production sur des architectures IA acquise chez Decathlon : conception et mise en production d'un agent conversationnel via Google ADK — architecture agentique réelle (pas un simple chatbot) : l'agent interroge et modifie une base de données en temps réel via function calling, avec RAG sur Vertex AI / Gemini.\n\n" +
     "Utilisateur quotidien de GitHub Copilot et Claude Code, intégrés au cœur du workflow de développement.\n\n" +
-    "Convaincu que l'IA est en train de redéfinir le métier de développeur en profondeur — pas seulement comme outil de productivité, mais dans la conception même des systèmes — je m'investis activement dans ce virage et cherche une équipe qui partage cette vision.",
+    "Convaincu que l'IA est en train de redéfinir le métier de développeur en profondeur — pas seulement comme outil de productivité, mais dans la conception même des systèmes — je m'investis activement dans cette transformation et cherche une équipe qui partage cette vision.",
 
   experiences: [
     {
@@ -78,12 +78,12 @@ export const profileDataFr: ProfileData = {
   skills: {
     technical: [
       { description: "LLMs · Agents IA · RAG · Prompt Engineering · Google ADK · Vertex AI", level: "expérience projet" },
-      { description: "Java 25 · Kotlin · Spring Boot 4 · Spring Modulith · Flyway · OAuth2/JWT", level: "senior" },
+      { description: "Java 25 · Kotlin · Spring Boot 4 · Spring Modulith", level: "senior" },
       { description: "TypeScript · React 19 · TanStack Router/Query · Vue.js / Nuxt · Angular · Nx", level: "opérationnel" },
-      { description: "SQL · Oracle · PostgreSQL · Elastic Search", level: "confirmé" },
+      { description: "SQL · Oracle · PostgreSQL", level: "confirmé" },
     ],
     aiTools: ["GitHub Copilot", "Claude Code", "ChatGPT", "Gemini"],
-    tools: ["Docker", "Kubernetes", "GCP", "GitHub Actions", "OpenTelemetry", "Prometheus", "Git", "Jenkins", "Maven"],
+    tools: ["Docker", "Kubernetes", "GCP", "GitHub Actions", "OpenTelemetry", "Prometheus", "Git", "Maven"],
     soft: ["Leadership technique", "Autonomie", "Communication", "Esprit analytique", "Adaptabilité"],
   },
 
@@ -169,12 +169,12 @@ export const profileDataEn: ProfileData = {
   skills: {
     technical: [
       { description: "LLMs · AI Agents · RAG · Prompt Engineering · Google ADK · Vertex AI", level: "project experience" },
-      { description: "Java 25 · Kotlin · Spring Boot 4 · Spring Modulith · Flyway · OAuth2/JWT", level: "senior" },
+      { description: "Java 25 · Kotlin · Spring Boot 4 · Spring Modulith", level: "senior" },
       { description: "TypeScript · React 19 · TanStack Router/Query · Vue.js / Nuxt · Angular · Nx", level: "operational" },
-      { description: "SQL · Oracle · PostgreSQL · Elastic Search", level: "proficient" },
+      { description: "SQL · Oracle · PostgreSQL", level: "proficient" },
     ],
     aiTools: ["GitHub Copilot", "Claude Code", "ChatGPT", "Gemini"],
-    tools: ["Docker", "Kubernetes", "GCP", "GitHub Actions", "OpenTelemetry", "Prometheus", "Git", "Jenkins", "Maven"],
+    tools: ["Docker", "Kubernetes", "GCP", "GitHub Actions", "OpenTelemetry", "Prometheus", "Git", "Maven"],
     soft: ["Technical Leadership", "Autonomy", "Communication", "Analytical Mindset", "Adaptability"],
   },
 
